@@ -22,7 +22,7 @@
             {% block resources_list %}
               <ul class="list-unstyled nav nav-simple">
                 {% for resource in resources %}
-                    {% set lan = resource.title[-2:] %}
+                    {% set lan = h.resource_display_name(resource)[-2:] %}
                     {% if g.locale == lan %}
                         <li class="nav-item{{ ' active' if active == resource.id }}">
                             <a href="{{ h.url_for('%s_resource.%s' % (pkg.type, (action or 'read')), id=pkg.name, resource_id=resource.id, inner_span=true) }}">
