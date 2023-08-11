@@ -9,6 +9,7 @@ dataset_fields:
 - field_name: title_translated
   label: Title
   preset: fluent_core_translated
+  site_id: default
   classes:
   - form-group
   - col-md-12
