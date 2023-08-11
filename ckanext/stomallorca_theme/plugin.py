@@ -66,7 +66,4 @@ class StomallorcaThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
     def before_dataset_search(self, search_params):
         search_params['q'] = search_params.get('q', '').lower()
         return search_params
-    # IPackageController
-    def before_package_create(self, context):
-        context['package']['site_id'] = config['ckan.site_id']
-        return context
+
