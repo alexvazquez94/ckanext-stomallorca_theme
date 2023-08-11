@@ -45,7 +45,6 @@ class StomallorcaThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
     plugins.implements(plugins.IPackageController, inherit=True)
 
     # IConfigurer
-
     def update_config(self, config_):
         toolkit.add_template_directory(config_, "templates")
         toolkit.add_public_directory(config_, "public")
@@ -67,4 +66,7 @@ class StomallorcaThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
     def before_dataset_search(self, search_params):
         search_params['q'] = search_params.get('q', '').lower()
         return search_params
-
+    # IPackageController
+    def before_package_create(self, context):
+        context['package']['site_id'] = config['ckan.site_id']
+        return context
