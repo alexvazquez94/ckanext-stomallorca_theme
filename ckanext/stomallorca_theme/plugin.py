@@ -43,7 +43,7 @@ class StomallorcaThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.ITemplateHelpers)
     plugins.implements(plugins.IPackageController, inherit=True)
-    plugins.implements(plugins.IRoutesDeprecated, inherit=True)
+    plugins.implements(plugins.IRoutes, inherit=True)
 
     # IConfigurer
 
@@ -67,9 +67,7 @@ class StomallorcaThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
     
         # IRoutes
 
-   # IRoutesDeprecated
-
-    def get_routes_deprecated(self):
+    def get_routes(self):
         return [
             {
                 'url': '/stomallorca/',
