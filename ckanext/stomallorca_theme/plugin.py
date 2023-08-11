@@ -61,7 +61,7 @@ class StomallorcaThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
             'stomallorca_portal_url': stomallorca_portal_url,
             'stomallorca_theme_get_license': get_license,
             'stomallorca_theme_get_group': get_group,
-            'fluent_core_title_translated': h.translate('schema:title')
+            'fluent_core_title_translated': h.get_template('extrafields_fluent_title.html')
         }
 
     # IPackageController
