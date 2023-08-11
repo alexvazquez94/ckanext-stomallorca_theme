@@ -1,6 +1,5 @@
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
-import ckan.template.base
 from ckan.lib.plugins import DefaultTranslation
 from ckan.common import config
 from ckan.model import Package
@@ -61,7 +60,6 @@ class StomallorcaThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
             'stomallorca_portal_url': stomallorca_portal_url,
             'stomallorca_theme_get_license': get_license,
             'stomallorca_theme_get_group': get_group,
-            'fluent_core_title_translated': ckan.template.base.get_template('extrafields_fluent_title.html')
         }
     
     # IPackageController
