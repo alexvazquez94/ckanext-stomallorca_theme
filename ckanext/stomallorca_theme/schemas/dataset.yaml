@@ -26,7 +26,7 @@ dataset_fields:
 
 - field_name: notes_translated
   label: Description
-  # preset: fluent_core_translated
+  preset: fluent_core_translated
   form_snippet: fluent_markdown.html
   form_placeholder: eg. Some useful notes about the data
   classes:
