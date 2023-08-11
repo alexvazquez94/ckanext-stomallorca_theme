@@ -22,9 +22,12 @@
             {% block resources_list %}
               <ul class="list-unstyled nav nav-simple">
                 {% for resource in resources %}
-                    {% if request.locale == {{ resource.title }}.rsplit("-", 1)[0] %}
+                    {% set lan = {{ resource.title }}.slice(-2) %}
+                    {% if g.locale == lan %}
                         <li class="nav-item{{ ' active' if active == resource.id }}">
-                            <a href="{{ h.url_for('%s_resource.%s' % (pkg.type, (action or 'read')), id=pkg.name, resource_id=resource.id, inner_span=true) }}">{{ h.resource_display_name(resource)|truncate(25) }}</a>
+                            <a href="{{ h.url_for('%s_resource.%s' % (pkg.type, (action or 'read')), id=pkg.name, resource_id=resource.id, inner_span=true) }}">
+                              {{ h.resource_display_name(resource)|truncate(25) }}
+                            </a>
                         </li>
                     {% endif %}
                 {% endfor %}
