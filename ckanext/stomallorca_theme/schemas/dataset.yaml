@@ -16,24 +16,20 @@ dataset_fields:
   form_placeholder: eg. A descriptive title
   form_snippet: extrafields_fluent_title.html
 
-
 - field_name: name
   label: URL
   preset: dataset_slug
   form_placeholder: eg. my-dataset
 
 
-
 - field_name: notes_translated
   label: Description
-  preset: multilingual_text
+  preset: multilingual_markdown
   form_snippet: fluent_markdown.html
   form_placeholder: eg. Some useful notes about the data
   classes:
   - form-group
   - col-md-12
-
-
 
 - field_name: data_birth_date
   label:
