@@ -3,6 +3,7 @@ import ckan.plugins.toolkit as toolkit
 from ckan.lib.plugins import DefaultTranslation
 from ckan.common import config
 from ckan.model import Package
+import ckan.lib.helpers as h
 
 def default_locale():
     '''Wrap the ckan default locale in a helper function to access
@@ -59,7 +60,7 @@ class StomallorcaThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
             'extrafields_default_locale': default_locale,
             'stomallorca_portal_url': stomallorca_portal_url,
             'stomallorca_theme_get_license': get_license,
-            'stomallorca_theme_get_group': get_group,
+            'stomallorca_theme_get_group': get_group
         }
     
     # IPackageController
