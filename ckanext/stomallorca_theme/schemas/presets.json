@@ -45,7 +45,6 @@
       "preset_name": "multilingual_text",
       "values": {
         "form_snippet": "fluent_text.html",
-        "display_snippet": "fluent_text.html",
         "validators": "fluent_text",
         "output_validators": "multilingual_text_output"
       }
