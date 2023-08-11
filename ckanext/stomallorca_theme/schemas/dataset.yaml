@@ -164,8 +164,7 @@ dataset_fields:
    en: Observations/notes additionals
    es: Observaciones/notas adicionales
    ca: Observacions/notes addicionals
-  preset: fluent_text
-  form_snippet: fluent_markdown.html
+  preset: multilingual_markdown
   form_placeholder: eg. Some useful notes about the data
   classes:
   - form-group
