@@ -8,7 +8,7 @@ dataset_fields:
 
 - field_name: title_translated
   label: Title
-  # preset: fluent_core_translated
+  preset: fluent_core_translated
   classes:
   - form-group
   - col-md-12
@@ -165,6 +165,7 @@ dataset_fields:
    es: Observaciones/notas adicionales
    ca: Observacions/notes addicionals
   preset: multilingual_markdown
+  form_snippet: fluent_markdown.html
   form_placeholder: eg. Some useful notes about the data
   classes:
   - form-group
