@@ -43,6 +43,7 @@ class StomallorcaThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.ITemplateHelpers)
     plugins.implements(plugins.IPackageController, inherit=True)
+    plugins.implements(plugins.IRoutes, inherit=True)
 
     # IConfigurer
 
@@ -63,6 +64,11 @@ class StomallorcaThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
             'stomallorca_theme_get_group': get_group,
             'fluent_core_title_translated': h.get_template('extrafields_fluent_title.html')
         }
+    
+        # IRoutes
+
+    def get_routes(self):
+        return stomallorca_portal_url
 
     # IPackageController
     def before_dataset_search(self, search_params):
