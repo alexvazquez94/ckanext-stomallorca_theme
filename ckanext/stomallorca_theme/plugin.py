@@ -3,6 +3,7 @@ import ckan.plugins.toolkit as toolkit
 from ckan.lib.plugins import DefaultTranslation
 from ckan.common import config
 from ckan.model import Package
+from ckan.plugins.core import IRoutes
 import ckan.lib.helpers as h
 
 def default_locale():
