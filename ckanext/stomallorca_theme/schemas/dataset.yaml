@@ -7,14 +7,16 @@ about_url: http://github.com/ckan/ckanext-scheming
 dataset_fields:
 
 - field_name: title_translated
-  label: Title
-  # preset: fluent_core_translated
+  label:
+    en: Name,
+    es: Nombre
+    ca: Nom
+  preset: fluent_core_translated
   classes:
   - form-group
   - col-md-12
-  mark_required: true
   form_placeholder: eg. A descriptive title
-  form_snippet: extrafields_fluent_title.html
+  # form_snippet: extrafields_fluent_title.html
 
 
 - field_name: name
