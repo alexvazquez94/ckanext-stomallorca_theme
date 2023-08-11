@@ -3,7 +3,6 @@ import ckan.plugins.toolkit as toolkit
 from ckan.lib.plugins import DefaultTranslation
 from ckan.common import config
 from ckan.model import Package
-from ckan.plugins import IRoutes
 import ckan.lib.helpers as h
 
 def default_locale():
@@ -44,7 +43,6 @@ class StomallorcaThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.ITemplateHelpers)
     plugins.implements(plugins.IPackageController, inherit=True)
-    plugins.implements(plugins.IRoutes, inherit=True)
 
     # IConfigurer
 
@@ -66,17 +64,6 @@ class StomallorcaThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
             'fluent_core_title_translated': h.get_template('extrafields_fluent_title.html')
         }
     
-        # IRoutes
-
-    def get_routes(self):
-        return [
-            {
-                'url': '/stomallorca/',
-                'view_func': self.stomallorca_home_page,
-                'request_method': 'GET'
-            }
-        ]
-
     # IPackageController
     def before_dataset_search(self, search_params):
         search_params['q'] = search_params.get('q', '').lower()
