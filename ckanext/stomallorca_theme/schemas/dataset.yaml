@@ -14,7 +14,7 @@ dataset_fields:
   - col-md-12
   mark_required: true
   form_placeholder: eg. A descriptive title
-  form_snippet: multiple_required_language_text.html
+  form_snippet: extrafields_fluent_title.html
 
 
 - field_name: name
