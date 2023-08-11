@@ -11,6 +11,7 @@
       {% snippet "package/snippets/resources.html", pkg=pkg, active=res.id %}
     
     #}
+    {% set pkg = package %}
     {% set resources = pkg.resources or [] %}
     {% if resources %}
       {% block resources %}
