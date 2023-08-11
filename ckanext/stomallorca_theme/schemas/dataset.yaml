@@ -124,6 +124,10 @@ dataset_fields:
       ca: Bianual
       es: Bianual
 
+- field_name: site_id
+  label: Site ID
+  preset: site_id
+
 - field_name: tag_string
   label: Tags
   preset: tag_string_autocomplete
