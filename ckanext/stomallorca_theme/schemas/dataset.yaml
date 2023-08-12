@@ -27,7 +27,7 @@ dataset_fields:
    en: Notes
    es: Notas
    ca: Notes
-  preset: multilingual_markdown
+  # preset: multilingual_markdown
   form_snippet: fluent_markdown.html
   form_placeholder: eg. Some useful notes about the data
   classes:
