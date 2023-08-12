@@ -19,7 +19,7 @@ dataset_fields:
 
 - field_name: name
   label: URL
-  preset: dataset_slug
+  preset: fluent_core_string
   form_placeholder: eg. my-dataset
 
 
