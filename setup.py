@@ -16,5 +16,6 @@ setup(
     entrypoints='''
         [ckan.plugins]
         stomallorca_theme=ckanext.stomallorca_theme.plugin:StomallorcaThemePlugin
+        ckanext-fluent=ckanext.fluent.plugin:FluentPlugin
     '''
 )
