@@ -8,7 +8,7 @@ dataset_fields:
 
 - field_name: title_translated
   label: Title
-  # preset: multilingual_text
+  # preset: fluent_core_translated
   classes:
   - form-group
   - col-md-12
@@ -16,23 +16,24 @@ dataset_fields:
   form_placeholder: eg. A descriptive title
   form_snippet: extrafields_fluent_title.html
 
+
 - field_name: name
   label: URL
   preset: dataset_slug
   form_placeholder: eg. my-dataset
 
 
+
 - field_name: notes_translated
-  label: 
-   en: Notes
-   es: Notas
-   ca: Notes
-  # preset: multilingual_markdown
+  label: Description
+  # preset: fluent_core_translated
   form_snippet: fluent_markdown.html
   form_placeholder: eg. Some useful notes about the data
   classes:
   - form-group
   - col-md-12
+
+
 
 - field_name: data_birth_date
   label:
@@ -163,7 +164,7 @@ dataset_fields:
    en: Observations/notes additionals
    es: Observaciones/notas adicionales
    ca: Observacions/notes addicionals
-  preset: multilingual_markdown
+  preset: fluent_text
   form_snippet: fluent_markdown.html
   form_placeholder: eg. Some useful notes about the data
   classes:
