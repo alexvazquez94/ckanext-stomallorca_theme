@@ -50,6 +50,19 @@ class StomallorcaThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
         toolkit.add_public_directory(config_, "public")
         toolkit.add_resource("assets", "stomallorca_theme")
 
+        config_[
+            "scheming.dataset_schemas"
+        ] = "ckanext.stomallorca_theme:schemas/dataset.yaml"
+        # config_[
+        #     "scheming.dataset_schemas"
+        # ] = "ckanext.translate:schemas/ckan_dataset.yaml"
+        config_[
+            "scheming.presets"
+        ] = """
+        ckanext.scheming:presets.json
+        ckanext.fluent:presets.json
+        """
+
     # ITemplateHelpers
     def get_helpers(self):
         """
