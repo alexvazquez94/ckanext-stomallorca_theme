@@ -8,7 +8,7 @@ dataset_fields:
 
 - field_name: title_translated
   label: Title
-  # preset: fluent_core_translated
+  preset: fluent_core_translated
   classes:
   - form-group
   - col-md-12
