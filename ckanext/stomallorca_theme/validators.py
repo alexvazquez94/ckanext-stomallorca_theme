@@ -18,7 +18,7 @@ import ckan.lib.helpers as h
 import ckan.lib.munge as munge
 import ckan.model as model
 import ckan.plugins.toolkit as toolkit
-import ckanext.dge_scheming.helpers as dh
+import ckanext.stomallorca_theme.helpers as dh
 
 from ckantoolkit import get_validator
 
