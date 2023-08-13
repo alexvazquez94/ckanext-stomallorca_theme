@@ -4,6 +4,7 @@ from ckan.lib.plugins import DefaultTranslation
 from ckan.common import config
 from ckan.model import Package
 import ckan.lib.helpers as h
+import ckanext.scheming.helpers as sh
 
 def default_locale():
     '''Wrap the ckan default locale in a helper function to access
