@@ -4,7 +4,8 @@ from ckan.lib.plugins import DefaultTranslation
 from ckan.common import config
 from ckan.model import Package
 import ckan.lib.helpers as h
-import ckanext.scheming.helpers as sh
+
+from ckanext.stomallorca_theme import helpers
 
 def default_locale():
     '''Wrap the ckan default locale in a helper function to access
@@ -42,7 +43,7 @@ def get_group(group_id):
 class StomallorcaThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
     plugins.implements(plugins.ITranslation)
     plugins.implements(plugins.IConfigurer)
-    plugins.implements(plugins.ITemplateHelpers, inherit=True)
+    plugins.implements(plugins.ITemplateHelpers)
     plugins.implements(plugins.IPackageController, inherit=True)
 
     # IConfigurer
