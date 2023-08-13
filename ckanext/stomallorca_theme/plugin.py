@@ -59,7 +59,8 @@ class StomallorcaThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
             'extrafields_default_locale': default_locale,
             'stomallorca_portal_url': stomallorca_portal_url,
             'stomallorca_theme_get_license': get_license,
-            'stomallorca_theme_get_group': get_group
+            'stomallorca_theme_get_group': get_group,
+            'stomallorca_multiple_field_required': helpers.stomallorca_multiple_field_required,
         }
     
     # IPackageController
