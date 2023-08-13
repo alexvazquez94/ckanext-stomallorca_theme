@@ -13,11 +13,6 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 # -*- coding: utf-8 -*-
-import json
-import logging
-import re
-import urllib
-import urlparse
 
 import ckan.lib.helpers as h
 import ckan.lib.munge as munge
