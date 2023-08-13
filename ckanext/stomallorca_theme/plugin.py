@@ -5,7 +5,7 @@ from ckan.common import config
 from ckan.model import Package
 import ckan.lib.helpers as h
 
-from ckanext.stomallorca_theme import helpers
+from ckanext.stomallorca_theme import validators, helpers
 
 def default_locale():
     '''Wrap the ckan default locale in a helper function to access
@@ -43,6 +43,7 @@ def get_group(group_id):
 class StomallorcaThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
     plugins.implements(plugins.ITranslation)
     plugins.implements(plugins.IConfigurer)
+    plugins.implements(plugins.IValidators, inherit=True)
     plugins.implements(plugins.ITemplateHelpers)
     plugins.implements(plugins.IPackageController, inherit=True)
 
@@ -51,6 +52,16 @@ class StomallorcaThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
         toolkit.add_template_directory(config_, "templates")
         toolkit.add_public_directory(config_, "public")
         toolkit.add_resource("assets", "stomallorca_theme")
+
+    # #########################################################################
+    # #########################################################################
+    # IValidators
+    # #########################################################################
+    # #########################################################################
+    def get_validators(self):
+        return {            
+            'tags_html_detected': validators.tags_html_detected,
+            }
 
     # ITemplateHelpers
     def get_helpers(self):
