@@ -42,7 +42,7 @@ def get_group(group_id):
 class StomallorcaThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
     plugins.implements(plugins.ITranslation)
     plugins.implements(plugins.IConfigurer)
-    plugins.implements(plugins.ITemplateHelpers)
+    plugins.implements(plugins.ITemplateHelpers, inherit=True)
     plugins.implements(plugins.IPackageController, inherit=True)
 
     # IConfigurer
